@@ -1,0 +1,148 @@
+{
+	"data": [
+		{
+			"date": "01-Sep-2021",
+			"description": [
+				"<strong> Raiden Shogun and Kujou Sara </strong> Banner was here !",
+				"<strong> Engulfing Lightning </strong> Weapon Banner has been added"
+			]
+		},
+		{
+			"date": "10-Sep-2021",
+			"description": [
+				"Now you can <strong>wishing on previous banner</strong> by clicking <strong>(x)</strong> button on the top right of the page",
+				"Now you can <strong>create screenshot and link to share</strong> when wishing"
+			]
+		},
+		{
+			"date": "21-Sep-2021",
+			"description": [
+				"<strong> Sagonomia Kokomi </strong> is ready to pull !",
+				"<strong> Everlasting Moonglow </strong> Weapon Banner has been added"
+			]
+		},
+		{
+			"date": "30-Sep-2021",
+			"description": [
+				"Add more previous banner, <strong> Eula, Zhongli, Tartaglia/Childe, Albedo, Ganyu, Xiao, Hu Tao, Venti </strong> is ready to pull ! <br/> Click <strong>(x)</strong> button on the top right of the page to change the banner"
+			]
+		},
+		{
+			"date": "13-Oct-2021",
+			"description": [
+				"<strong> Tartaglia </strong> is ready to pull !",
+				"<strong> Polar Star </strong> Weapon Banner has been added"
+			]
+		},
+		{
+			"date": "2-Nov-2021",
+			"description": [
+				"<strong> Hu Tao </strong> Character Banner has been added !",
+				"<strong> Thoma </strong> is ready to pull !",
+				"<strong> Staff of Homma </strong> & <strong>Elegy for The End</strong> Weapon Banner has been added"
+			]
+		},
+		{
+			"date": "24-Nov-2021",
+			"description": [
+				"<strong> Albedo </strong> Banner was here !",
+				"<strong> Eula </strong> Banner also here !",
+				"<strong> Freedom Sworn & Song of Broken Pines </strong> Weapon Banner has been added"
+			]
+		},
+		{
+			"date": "08-Des-2021",
+			"description": [
+				"<strong>Fixing Bugs</strong> of History.",
+				"if you find any error, follow this steps to reset browser cache specialy only for WIsh Simulator Site . Open Inpect ELement ( CTRL + Shift i ) -> Application -> Storage -> Click on \"Clear Site Data\" Button",
+				"Ignore the steps above if this is the first time you visit this site or if you already do reset"
+			]
+		},
+		{
+			"date": "14-Des-2021",
+			"description": [
+				"<strong> Arrataki Itto </strong> character Banner is ready to pull",
+				"<strong> Redhorn Stonethresher </strong> Weapon Banner has been added !"
+			]
+		},
+		{
+			"date": "29-Des-2021",
+			"description": ["Implement Epitomized Path System to Weapon Banner for patch 2.0 and above"]
+		},
+		{
+			"date": "05-Jan-2022",
+			"description": [
+				"Now you can pull <strong> Shenhe </strong> and <strong>Yunjin</strong> the Best Waifu!",
+				"<strong>Calamity Queller</strong> Weapon Banner was added"
+			]
+		},
+		{
+			"date": "25-Jan-2022",
+			"description": [
+				"<strong>Gong Xi Fa Cai</strong>. Wish you luck on Lantern Rite event",
+				"<strong> Zhongli and Ganyu Rerun Banner </strong> Already out here !",
+				"<strong> Vortex and Amos </strong> Weapon Rerun Banner is ready to pull too !"
+			]
+		},
+		{
+			"date": "11-Feb-2022",
+			"description": [
+				"Now you can pull without worry about running out of fate, just activate the <b>Unlimited Fates Option</b> in Menu by clicking the <b>(?)</b> button on top of the page"
+			]
+		},
+		{
+			"date": "16-Feb-2022",
+			"description": [
+				"Event Banner Updated, Now you can pull <strong> Yae Miko </strong> here !",
+				"Yae Miko signature Weapon, <strong>Kagura's Verity</strong> is ready to pull too !",
+				"Inventory Updated, Now You can show all Characters and Weapons both you already got or not"
+			]
+		},
+		{
+			"date": "08-Mar-2022",
+			"description": [
+				"<strong> Raiden Shogun Rerun </strong> Banner was here !",
+				"<strong> Sagonomia Kokomi </strong> is ready to pull too!",
+				"Weapon Banner Updated, <b> Engulfing Lightning </b> and <b>Everlasting Moonglow</b> already added"
+			]
+		},
+		{
+			"date": "23-Mar-2022",
+			"featured": true,
+			"description": [
+				"<strong>Due to high number of visitors</strong>, Our monthly bandwidth also increased. We need to upgrade the hosting plan to keep this app alive. So <strong>We'll show some ad on </strong> this app. <br/> We're sorry to you, actually we don't want to ruin your wishing experience. If you feel annoyed with ad, feel free to use Ad blocker, we will not forbit you"
+			]
+		},
+		{
+			"date": "28-Mar-2022",
+			"description": [
+				"<strong> Kamisato Ayato </strong> Banner was here !",
+				"<strong> Venti </strong> is ready to pull too!",
+				"Weapon Banner Updated, <b> Haran Geppaku Futsu </b> and <b>Elegy for the End</b> already added"
+			]
+		},
+		{
+			"date": "17-Apr-2022",
+			"featured": true,
+			"description": [
+				"<strong> Kamisato Ayaka Rerun </strong> Banner already out !",
+				"Weapon Banner Updated, <b> Mistsplitter Reforged </b> and <b>The Unforged</b> was here too!"
+			]
+		},
+		{
+			"date": "20-Apr-2022",
+			"description": [
+				"We recently had to <strong>migrate our server </strong> for other reasons, so the old wishing histories isn't being tracked on the new server, We apologize for the inconvenience. We hope it doesn't happen again in the future, so you can enjoy the simulator peacefully"
+			]
+		},
+		{
+			"date": "29-May-2022",
+			"featured": true,
+			"description": [
+				"<strong> Yelan </strong> Banner already out !",
+				"<strong> Xiao 3rd Rerun </strong> Banner was here !",
+				"Weapon Banner Updated, <b> Aqua Simulacra </b> and <b>Primordial Jade Winged Spear</b> are ready to pull !"
+			]
+		}
+	]
+}
