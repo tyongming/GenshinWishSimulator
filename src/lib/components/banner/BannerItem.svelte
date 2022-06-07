@@ -140,7 +140,7 @@
 		width: 88%;
 		max-height: unset;
 		margin-bottom: -10px;
-		zoom:10%;
+		zoom:80%;
 	}
 
 	.navigate {
