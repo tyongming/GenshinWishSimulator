@@ -277,4 +277,11 @@
 		height: 50px;
 		margin-bottom: 0.2rem;
 	}
+
+	/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) { 
+   .banner{
+	   zoom:100%;
+   }
+}
 </style>
