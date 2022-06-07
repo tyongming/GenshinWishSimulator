@@ -1,6 +1,7 @@
 <script>
 	import { createEventDispatcher, onMount } from 'svelte';
 	import {
+		genesis,
 		primogem,
 		isAcquaintUsed,
 		acquaint,
@@ -27,6 +28,7 @@
 	export let rollCount = 0;
 
 	export let showTopupPopup = false;
+	export let showGenesisPopup = false;
 
 	let v3star;
 	let v4starSingle;
@@ -50,19 +52,47 @@
 	$: popupButton = $primogem < balanceNeededToRoll * 160 ? 'topup' : 'all' ;
 	$: fateType = $isAcquaintUsed ? 'Acquaint' : 'Intertwined';
 
+	
+
 	const closeExchangePopup = () => {
 		dispatch('cancelPopup');
 	};
 
-	const handleTopupPopup = () => {
-		showTopupPopup = true;
+	const closeGenesisPopup = () =>{
+		showGenesisPopup = false;
+		playSfx();
 	}
+
+	const CheckGenesis = () => {
+		if($genesis < balanceNeededToRoll * 160-$primogem){
+			showTopupPopup = true;
+			playSfx();
+		}else{
+			
+			$genesis=($genesis-(balanceNeededToRoll * 160-$primogem));
+			const upgenesis=$genesis;
+			localBalance.set('genesis', upgenesis);
+			$primogem=($primogem+(balanceNeededToRoll * 160-$primogem));
+			const upprimo=$primogem;
+			localBalance.set('primogem', upprimo);
+
+			showGenesisPopup = false;
+			
+		}
+	}
+
+	const handleGenesisPopup = () => {
+		showGenesisPopup = true;
+	}
+
 
 	const closeTopupPopup = () => {
 		showTopupPopup = false;
+		playSfx();
 		
 	}
 
+	
 
 
 	const handleExchangePopup = async () => {
@@ -142,7 +172,7 @@
 	show={showConvertPopup}
 	on:cancel={closeExchangePopup}
 	on:confirm={handleExchangePopup}
-	on:topup={handleTopupPopup}
+	on:topup={handleGenesisPopup}
 	on:topup={closeExchangePopup}
 	
 >
@@ -165,6 +195,34 @@
 		</div>
 	</div>
 </PopUp>
+
+<PopUp
+	title="Primogem Top-Up"
+	sfx={false}
+	button={popupButton}
+	show={showGenesisPopup}
+	on:cancel={closeGenesisPopup}
+	on:topup={CheckGenesis}
+	on:topup={closeGenesisPopup}
+	
+>
+	<div class="exchange">
+		<div>
+			Insufficient Primogems. Use <span class="yellow">{balanceNeededToRoll * 160 - $primogem}</span>
+			Genesis  <br />
+			Crystals to exchange for the required amount of
+			
+			Primogems ?
+
+			{#if $primogem < balanceNeededToRoll * 160}
+				<br />
+				<br />
+				<span class="red"></span>
+			{/if}
+		</div>
+	</div>
+</PopUp>
+
 
 <PopUp
 	title="Primogem Top-Up"
