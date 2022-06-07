@@ -241,6 +241,6 @@
 
 	:global(.mobile) .popup {
 		max-width: 100vh;
-		zoom: 100%;
+		zoom: 10%;
 	}
 </style>
