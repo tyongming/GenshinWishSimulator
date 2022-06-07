@@ -5,7 +5,7 @@
 	import playSfx from '$lib/functions/audio';
 	import { viewportHeight } from '$lib/store/stores';
 
-	import {style} from "$lib/components/banner/BannerItem.svelte";
+	
 
 	
 
@@ -52,7 +52,7 @@
 
 {#if show}
 	<div class="popup" transition:fade={{ duration: 80 }} style="height: {$viewportHeight}px;">
-		<div class="popup-content" {style}>
+		<div class="popup-content" >
 			<i class="gi-primo-star top-left" />
 			<i class="gi-primo-star top-right" />
 			<i class="gi-primo-star bottom-left" />
@@ -122,11 +122,6 @@
 		color: #383b40;
 		position: relative;
 		zoom: 120%;
-	}
-
-	:global(.mobile) .popup-content {
-		max-width: 100vh;
-		zoom: 100%;
 	}
 
 	.container {
@@ -242,5 +237,10 @@
 	}
 	.gi-circle-o {
 		color: #ffc107;
+	}
+
+	:global(.mobile) .popup-content {
+		max-width: 100vh;
+		zoom: 100%;
 	}
 </style>
