@@ -27,6 +27,6 @@
 		data-cfasync="false"
 		type="text/javascript"
 		data-adel="atag"
-		src="//acacdn.com/script/atg.js"
+		src=""
 		czid="v1xd6wvvpe"></script>
 {/if}
