@@ -272,17 +272,10 @@
 	:global(.mobile) .banner {
 		width: 120%;
 		margin-left: -20px;
-		zoom:80%;
 	}
 	:global(.mobile) .button {
 		height: 50px;
 		margin-bottom: 0.2rem;
 	}
 
-	/* max-width 640px, mobile-only styles, use when QAing mobile issues */
-@media(max-width: 40em){ 
-   .banner{
-	   zoom:100%;
-   }
-}
 </style>
