@@ -5,6 +5,8 @@
 	import playSfx from '$lib/functions/audio';
 	import { viewportHeight } from '$lib/store/stores';
 
+	import {style} from "$lib/components/banner/BannerItem.svelte";
+
 	
 
 	export let show = false;
@@ -50,7 +52,7 @@
 
 {#if show}
 	<div class="popup" transition:fade={{ duration: 80 }} style="height: {$viewportHeight}px;">
-		<div class="popup-content">
+		<div class="popup-content" {style}>
 			<i class="gi-primo-star top-left" />
 			<i class="gi-primo-star top-right" />
 			<i class="gi-primo-star bottom-left" />
