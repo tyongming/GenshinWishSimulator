@@ -20,7 +20,7 @@
 		$viewportHeight > 800 ||
 		$viewportHeight > $viewportWidth ||
 		$viewportHeight / $viewportWidth > 0.5
-			? 'bottom: unset; top: 50%; transform: translate(-50%, -50%);zoom:10%;' + mobileBannerStyle
+			? 'bottom: unset; top: 50%; transform: translate(-50%, -50%);' + mobileBannerStyle
 			: mobileBannerStyle;
 
 	$: activeBanner = $bannerList[$bannerActive];
@@ -140,6 +140,7 @@
 		width: 88%;
 		max-height: unset;
 		margin-bottom: -10px;
+		zoom:10%;
 	}
 
 	.navigate {
