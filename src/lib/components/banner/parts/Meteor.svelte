@@ -225,7 +225,7 @@
 
 
 <PopUp
-	title="Primogem Top-Up"
+	title="Crystal Top-Up"
 	sfx={false}
 	button={popupButton}
 	show={showTopupPopup}
@@ -235,7 +235,7 @@
 >
 	<div class="exchange">
 		<div>
-			Insufficient Primogems. Go to Crystal <br> Top-Up Page?
+			Insufficient Genesis Crystals. Go to Crystal <br> Top-Up Page?
 
 			{#if $primogem < balanceNeededToRoll * 160}
 				<br />
