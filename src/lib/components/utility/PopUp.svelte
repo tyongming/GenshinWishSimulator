@@ -124,7 +124,7 @@
 
 	:global(.mobile) .popup-content {
 		max-width: 100vh;
-		zoom:100%;
+		zoom: 100%;
 	}
 
 	.container {
