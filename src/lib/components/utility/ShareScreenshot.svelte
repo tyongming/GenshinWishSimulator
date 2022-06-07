@@ -23,7 +23,7 @@
 	let blob;
 	const shareText = "Wow! I'm so lucky when pulling on Wish Simulator, you can try Yours !";
 	let url = '/assets/images/meta-picture.jpg';
-	$: shareLink = `${HOST}/screen/${page}?a=${encodedData}`;
+	$: shareLink = `${HOST}/screen/${page}?a=${encodedData}.png`;
 
 	onMount(() => {
 		isFirstShare = firstShare.check();
