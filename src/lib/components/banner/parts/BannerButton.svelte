@@ -171,6 +171,7 @@
 	:global(.mobile) button {
 		transform: scale(0.93);
 		margin: 0.2rem 0;
+		zoom:100%
 	}
 
 	:global(.mobile) button.active {
