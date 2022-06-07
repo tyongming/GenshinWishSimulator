@@ -272,7 +272,7 @@
 	:global(.mobile) .banner {
 		width: 120%;
 		margin-left: -20px;
-		zoom:80%;
+		zoom:100%;
 	}
 	:global(.mobile) .button {
 		height: 50px;
