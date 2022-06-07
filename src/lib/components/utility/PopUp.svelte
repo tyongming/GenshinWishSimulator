@@ -239,7 +239,7 @@
 		color: #ffc107;
 	}
 
-	:global(.mobile) .popup-content {
+	:global(.mobile) .popup {
 		max-width: 100vh;
 		zoom: 100%;
 	}
