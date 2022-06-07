@@ -244,7 +244,7 @@
 		zoom: 100%;
 	}
 
-	@media(max-width:700px){
+	@media(max-width:850px){
 		.popup-content{
 			zoom:100%;
 		}
