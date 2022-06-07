@@ -14,11 +14,19 @@
 	import { localBalance } from '$lib/store/localstore';
 	import Toast from '$lib/components/utility/Toast.svelte';
 
+	import {
+		pageActive,
+	} from '$lib/store/stores';
+	import browserState from '$lib/functions/browserState';
+	import playSfx from '$lib/functions/audio';
+
 	export let showMeteor = false;
 	export let meteorStar = 3;
 	export let singleMeteor = true;
 	export let showConvertPopup = false;
 	export let rollCount = 0;
+
+	export let showTopupPopup = false;
 
 	let v3star;
 	let v4starSingle;
@@ -27,16 +35,35 @@
 	let v5star;
 	let showToast = false;
 
+	const changePage = (page) => {
+		pageActive.set(page);
+		browserState.set(page);
+		if (page === 'shop') return playSfx('shop');
+		return playSfx();
+	};
+
+
 	const dispatch = createEventDispatcher();
 	$: balance = $isAcquaintUsed ? $acquaint : $intertwined;
 	$: isBeginner = $bannerList[$bannerActive]?.type === 'beginner';
 	$: balanceNeededToRoll = (isBeginner && rollCount > 1 ? 8 : rollCount) - balance;
-	$: popupButton = $primogem < balanceNeededToRoll * 160 ? 'cancel' : 'all';
+	$: popupButton = $primogem < balanceNeededToRoll * 160 ? 'topup' : 'all' ;
 	$: fateType = $isAcquaintUsed ? 'Acquaint' : 'Intertwined';
 
 	const closeExchangePopup = () => {
 		dispatch('cancelPopup');
 	};
+
+	const handleTopupPopup = () => {
+		showTopupPopup = true;
+	}
+
+	const closeTopupPopup = () => {
+		showTopupPopup = false;
+		
+	}
+
+
 
 	const handleExchangePopup = async () => {
 		const promise = new Promise((resolve, reject) => {
@@ -115,6 +142,9 @@
 	show={showConvertPopup}
 	on:cancel={closeExchangePopup}
 	on:confirm={handleExchangePopup}
+	on:topup={handleTopupPopup}
+	on:topup={closeExchangePopup}
+	
 >
 	<div class="exchange">
 		<div>
@@ -122,7 +152,7 @@
 			{fateType}
 			Fate are needed. <br />
 			Purchase with
-			<span class="yellow" class:red={$primogem < balanceNeededToRoll * 160}>
+			<span class="yellow" class:yellow={$primogem < balanceNeededToRoll * 160}>
 				{balanceNeededToRoll * 160}
 			</span>
 			Primogem ?
@@ -130,7 +160,29 @@
 			{#if $primogem < balanceNeededToRoll * 160}
 				<br />
 				<br />
-				<span class="red">Infsufficient Funds</span>
+				<span class="red"></span>
+			{/if}
+		</div>
+	</div>
+</PopUp>
+
+<PopUp
+	title="Primogem Top-Up"
+	sfx={false}
+	button={popupButton}
+	show={showTopupPopup}
+	on:cancel={closeTopupPopup}
+	on:topup={() => changePage('shop')}
+	
+>
+	<div class="exchange">
+		<div>
+			Insufficient Primogems. Go to Crystal <br> Top-Up Page?
+
+			{#if $primogem < balanceNeededToRoll * 160}
+				<br />
+				<br />
+				<span class="red"></span>
 			{/if}
 		</div>
 	</div>

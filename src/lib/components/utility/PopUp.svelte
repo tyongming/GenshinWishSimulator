@@ -5,13 +5,20 @@
 	import playSfx from '$lib/functions/audio';
 	import { viewportHeight } from '$lib/store/stores';
 
+	
+
 	export let show = false;
 	export let title = '';
 	export let confirm = true;
 	export let button = 'all';
 	export let sfx = true;
 
+
+
+
+
 	let content;
+
 
 	onMount(() =>
 		OverlayScrollbars(content, { sizeAutoCapable: false, className: 'os-theme-light' })
@@ -26,7 +33,20 @@
 		dispatch('cancel');
 		if (sfx) playSfx();
 	};
+	const topupClick = () => {
+		dispatch('topup')
+		if (sfx) playSfx();
+	};
+
+
+
+
+
 </script>
+
+
+
+
 
 {#if show}
 	<div class="popup" transition:fade={{ duration: 80 }} style="height: {$viewportHeight}px;">
@@ -54,6 +74,16 @@
 						{/if}
 						{#if ['confirm', 'all'].indexOf(button) > -1}
 							<button class="confirm" on:click={confirmClick}>
+								<i class="gi-circle-o" />
+								<span> Confirm </span>
+							</button>
+						{/if}
+						{#if ['topup'].indexOf(button) > -1}
+						<button class="cancel" on:click={cancelClik}>
+							<i class="gi-times" />
+							<span> Cancel </span>
+						</button>
+							<button class="confirm" on:click={topupClick}>
 								<i class="gi-circle-o" />
 								<span> Confirm </span>
 							</button>
